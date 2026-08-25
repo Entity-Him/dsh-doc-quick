@@ -1,0 +1,52 @@
+{
+  "name": "dsh-doc-quick",
+  "version": "0.1.0",
+  "description": "文档快处插件: 拖拽文档进 Web 对话框 → Agent 直接读取处理 → 完成时右侧弹出侧栏展示产出与文件路径。host 端直读本地文件系统(支持 PDF/Word/PPT/EPUB/Notebook/Markdown/文本),提供 doc_list / doc_read / doc_complete 工具与任务侧栏。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./typert": "./lib/typert.host.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.5",
+    "@deepseek-ai/dsh-system-prompt": "^0.1.0-rc.5"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-system-prompt": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Entity-Him/dsh-doc-quick.git"
+  },
+  "homepage": "https://github.com/Entity-Him/dsh-doc-quick",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "harmonyos",
+    "doc",
+    "docs",
+    "pdf"
+  ]
+}

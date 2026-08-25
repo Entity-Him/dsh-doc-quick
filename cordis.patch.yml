@@ -1,0 +1,4 @@
+# dsh-doc-quick bundle patch: one host row over the web profile.
+- insert:
+    - id: doc-quick
+      name: dsh-doc-quick
